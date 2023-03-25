@@ -1,11 +1,11 @@
 {
-  "domain": "openai_conversation",
-  "name": "OpenAI Conversation",
-  "codeowners": ["@balloob"],
+  "domain": "hass_chatbot",
+  "name": "HASS Chatbot",
+  "codeowners": ["@balloob"], ["@shanem2004"],
   "config_flow": true,
   "dependencies": ["conversation"],
   "documentation": "https://www.home-assistant.io/integrations/openai_conversation",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "requirements": ["openai==0.26.2"]
+  "requirements": ["openai==0.27.2"]
 }
