@@ -108,7 +108,7 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
         ):
             user_name = user.name
 
-        prompt += f"\n{user_name}: {user_input.text}\nSmart home: "
+        prompt += f"\n{user_name}: {user_input.text}\nSmart home: " # this variable isnt currently being used
 
         _LOGGER.debug("Prompt for %s: %s", model, prompt)
 
