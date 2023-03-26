@@ -28,10 +28,10 @@ Now finish this conversation:
 Smart home: How can I assist?
 """
 CONF_MODEL = "model"
-DEFAULT_MODEL = "text-davinci-003"
+DEFAULT_MODEL = "gpt-3.5-turbo"
 CONF_MAX_TOKENS = "max_tokens"
 DEFAULT_MAX_TOKENS = 150
 CONF_TOP_P = "top_p"
 DEFAULT_TOP_P = 1
 CONF_TEMPERATURE = "temperature"
-DEFAULT_TEMPERATURE = 0.5
+DEFAULT_TEMPERATURE = 0.7
