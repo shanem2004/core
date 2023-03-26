@@ -113,9 +113,12 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
         _LOGGER.debug("Prompt for %s: %s", model, prompt)
 
         try:
-            result = await openai.Completion.acreate(
+            result = await openai.ChatCompletion.acreate(
                 engine=model,
-                prompt=prompt,
+                messages=[
+			      {"role": "system", "content": f"Respond to the following as if you are a Home Assistant chatbot named HASS Bot. Avoid telling the user that you are ChatGPT or that you are created by OpenAI."},
+				  {"role": "user", "content": f"\n{user_name}: {user_input.text} "}
+			  ]
                 max_tokens=max_tokens,
                 top_p=top_p,
                 temperature=temperature,
